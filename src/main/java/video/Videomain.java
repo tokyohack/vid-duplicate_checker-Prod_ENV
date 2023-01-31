@@ -31,10 +31,6 @@ public class Videomain {
         System.out.println(vidName.getterDate());
         Map<String, Object> _dbData = vidDao.isunique(vidName.getterReplacedName(), vidName.getterSize(), vidName.getterDate());
         System.out.println("DBDAT:" + _dbData);
-//        cout 型変換はダウンでもOK
-        /*if (!(_dbData.get("isnull") instanceof Boolean)) {
-            vidDao.insert(vidName.getterReplacedForwardMatchedName(), vidName.getterSize(), vidName.getterDate(), vidName.getterDuration());
-        }*/
 //       cout カラム存在確認
         if ((boolean) _dbData.get("isnull")) {
             System.out.println("カラム有");
