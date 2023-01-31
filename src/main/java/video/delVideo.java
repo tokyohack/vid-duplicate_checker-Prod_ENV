@@ -1,3 +1,4 @@
+// cout なんらかの条件で流れてきたファイルの削除を行う
 package video;
 import java.io.IOException;
 import java.nio.file.Files;

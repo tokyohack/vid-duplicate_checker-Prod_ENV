@@ -1,3 +1,4 @@
+// cout DAO Class DBの操作を行う
 package video;
 
 import java.sql.*;

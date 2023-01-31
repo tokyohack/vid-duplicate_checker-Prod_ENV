@@ -1,3 +1,4 @@
+//cout DBに重複があるかbool返す
 package video;
 import java.util.Objects;
 public class isUnique {

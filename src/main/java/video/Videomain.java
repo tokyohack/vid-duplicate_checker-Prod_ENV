@@ -1,3 +1,4 @@
+//cout Main処理
 package video;
 
 import java.io.IOException;
@@ -16,7 +17,7 @@ public class Videomain {
     public static void main(String[] args) throws IOException {
 //        cout 引数チェック
         String vidPath = new checkArgs(args).getterFilePath();
-////           cout 引数ファイルパス存在確認
+//        cout 引数ファイルパス存在確認
         video vidName = new video(vidPath);
         System.out.println("両端置換後の名前は" + vidName.getterReplacedName() + "です。");
         System.out.println("ファイルサイズは" + vidName.getterSize() + "です。");
