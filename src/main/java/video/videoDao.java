@@ -1,4 +1,4 @@
-// cout DAO Class DBの操作を行う
+// DAOなClass DBの操作を行う
 package video;
 
 import java.sql.*;
@@ -62,8 +62,8 @@ public class videoDao {
             ResultSet resultSet = ps.executeQuery();
             System.out.println("DROP:" + forwardMatch + "======" + size + "======" + date);
             if (resultSet.next()) {
-                boolean found = resultSet.getBoolean(1);
-                if (found) {
+                boolean bRet = resultSet.getBoolean(1);
+                if (bRet) {
                     System.out.println("テーブルに存在します。");
 
                     values.put("isnull", true);

@@ -1,4 +1,4 @@
-// cout 引数から受け取ったファイルから名前,放送日,サイズを返します
+// 引数から受け取ったファイルから名前,放送日,サイズを返す
 package video;
 
 import net.bramp.ffmpeg.FFprobe;

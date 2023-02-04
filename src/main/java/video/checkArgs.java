@@ -1,4 +1,4 @@
-// cout 引数ファイルパス確認
+// 引数ファイルパスの確認
 package video;
 import java.io.File;
 public class checkArgs {
@@ -16,7 +16,7 @@ public class checkArgs {
     public String getterFilePath() {
         return this.nameFilePath;
     }
-//    cout 引数が無い場合か引数が1以外の時Falseを返す
+//     引数が無い場合か引数が1以外の時Falseを返す
     public boolean isArgsNull(String[] args) {
         return !(args == null || args.length != 1);
     }
