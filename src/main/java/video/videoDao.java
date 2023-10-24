@@ -5,7 +5,7 @@ import java.sql.*;
 import java.util.HashMap;
 import java.util.Map;
 
-public class videoDao {
+class videoDao {
     private final String SQL_CREATE;
     private final String URL;
     public static final String SQL_SELECT

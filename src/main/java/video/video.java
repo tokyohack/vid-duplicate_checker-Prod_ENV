@@ -14,7 +14,7 @@ import java.time.OffsetDateTime;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 
-public class video {
+class video {
     private String forwardMatched;
     private String replacedName;
     private long date;
@@ -36,8 +36,12 @@ public class video {
         return forwardMatched = this.videoPath.replaceAll("^.*\s-", "");
     }
 
-    public long getterSize() throws IOException {
-        return size = Files.size(Path.of(this.videoPath));
+    public long getterSize()  {
+        try {
+            return size = Files.size(Path.of(this.videoPath));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public long getterDate() {
@@ -50,8 +54,13 @@ public class video {
         return date;
     }
 
-    public double getterDuration() throws IOException {
-        FFprobe ffprobe = new FFprobe("ffprobePath");
+    public double getterDuration()  {
+        FFprobe ffprobe = null;
+        try {
+            ffprobe = new FFprobe("ffprobePath");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         FFmpegProbeResult probeResult = null;
         Path of = Path.of(videoPath);
         try {

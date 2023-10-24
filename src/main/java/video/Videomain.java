@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.util.Map;
 
 public class Videomain {
+//    private Vidpathname vidpathname = new Vidpathname("");
+
     private static final String SQL_CREATE = "CREATE TABLE IF NOT EXISTS video"
             + "(name TEXT NOT NULL PRIMARY KEY,"
             + " size INTEGER,"
@@ -14,7 +16,9 @@ public class Videomain {
     private static final String URL
             = "jdbc:sqlite:Sample.db";
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
+//        Vidpathname vidpathname = new Vidpathname(args);
+//        System.out.println("ファイルサイズは" + vidpathname.getVidpathname() + "です。");
 //         引数チェック
         String vidPath = new checkArgs(args).getterFilePath();
 //         引数ファイルパス存在確認

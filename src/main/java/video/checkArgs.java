@@ -8,7 +8,7 @@ public class checkArgs {
 
     public checkArgs(String[] args) {
         if (isArgsNull(args)) {
-            var filePath = this.checkExistsFilePath(args[0]);
+            String filePath = this.checkExistsFilePath(args[0]);
             if (filePath != null) {
                 this.nameFilePath = filePath;
             }
@@ -24,7 +24,7 @@ public class checkArgs {
 
     //     引数が無い場合か引数が1以外の時Falseを返す
     public boolean isArgsNull(String[] args) {
-        return !(args == null || args.length != 1);
+        return args.length == 1 && args[0].trim().length() != 0 && !args[0].equals("\"\"") && !args[0].equals("\'\''") && !args[0].matches(".*\\*.*") && !args[0].equals("%PATH%");
     }
 
     public String checkExistsFilePath(String vidPath) {
